@@ -1,0 +1,22 @@
+package com.springboot.blog.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(
+		name = "posts" , uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
+		)
+public class Posts {
+	
+	private int id;
+	
+	private String title;
+	
+	private String description;
+	
+	private String content;
+	
+
+}
